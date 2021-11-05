@@ -1,5 +1,4 @@
 {
-  "homepage": "http://xtrent777x.github.io/shop-redux",
   "name": "mern-shopping",
   "version": "1.0.0",
   "description": "",
@@ -10,15 +9,12 @@
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
-    
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
-    
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
