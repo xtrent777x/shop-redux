@@ -1,11 +1,14 @@
 import React from 'react';
 // import { useStoreContext } from "../../utils/GlobalState";
+//https://react-redux.js.org/api/hooks
+//https://levelup.gitconnected.com/react-redux-hooks-useselector-and-usedispatch-f7d8c7f75cdd
+import { useDispatch } from 'react-redux';
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
 const CartItem = ({ item }) => {
 
-  const [, dispatch] = useStoreContext();
+  const dispatch = useDispatch();
 
   const removeFromCart = item => {
     dispatch({
