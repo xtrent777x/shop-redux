@@ -1,4 +1,5 @@
 {
+  "homepage": "http://xtrent777x.github.io/shop-redux",
   "name": "mern-shopping",
   "version": "1.0.0",
   "description": "",
@@ -8,13 +9,17 @@
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^5.1.0",
+    "gh-pages": "^3.2.3"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
