@@ -1,4 +1,4 @@
-// import { useReducer } from "react"; not needed with redux
+import { useReducer } from "react";
 import {
   UPDATE_PRODUCTS,
   ADD_TO_CART,
@@ -11,17 +11,7 @@ import {
   TOGGLE_CART
 } from "./actions";
 
-//https://redux.js.org/tutorials/fundamentals/part-4-store//
-//https://redux.js.org/introduction/getting-started//
-const initialState = {
-  cart:[],
-  cartOpen: [],
-  products: [],
-  categories: [],
-  currentCategory: ""
-}
-
-export const reducer = (state = initialState, action) => {
+export const reducer = (state, action) => {
   switch (action.type) {
     case UPDATE_PRODUCTS:
       return {
@@ -95,9 +85,6 @@ export const reducer = (state = initialState, action) => {
   }
 };
 
-export default reducer;
-
-// export per redux documentation reducer function
-// export function useProductReducer(initialState) {
-//   return useReducer(reducer, initialState)
-// }
+export function useProductReducer(initialState) {
+  return useReducer(reducer, initialState)
+}
