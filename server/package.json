@@ -1,4 +1,5 @@
 {
+  "homepage": "http://xtrent777x.github.io/shop-redux",
   "name": "mern-server",
   "version": "1.0.0",
   "description": "",
@@ -6,7 +7,9 @@
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon",
-    "seed": "node config/seeds.js"
+    "seed": "node config/seeds.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +29,7 @@
     "stripe": "^8.186.0"
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "nodemon": "^2.0.2"
   }
 }
