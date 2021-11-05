@@ -3,18 +3,19 @@ import { useProductReducer } from './reducers'
 
 const StoreContext = createContext();
 const { Provider } = StoreContext;
+// moved to reducer call
+// https://redux-toolkit.js.org/api/createreducer
+// const StoreProvider = ({ value = [], ...props }) => {
+//   const [state, dispatch] = useProductReducer({
+//     products: [],
+//     cart: [],
+//     cartOpen: false,
+//     categories: [],
+//     currentCategory: '',
+//   });
 
-const StoreProvider = ({ value = [], ...props }) => {
-  const [state, dispatch] = useProductReducer({
-    products: [],
-    cart: [],
-    cartOpen: false,
-    categories: [],
-    currentCategory: '',
-  });
-
-  return <Provider value={[state, dispatch]} {...props} />;
-};
+//   return <Provider value={[state, dispatch]} {...props} />;
+// };
 
 const useStoreContext = () => {
   return useContext(StoreContext);
